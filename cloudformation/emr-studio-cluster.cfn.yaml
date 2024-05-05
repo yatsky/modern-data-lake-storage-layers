@@ -418,11 +418,11 @@ Resources:
         - IpProtocol: tcp
           FromPort: 8443
           ToPort: 8443
-          SourceSecurityGroupId: !Ref EMRPrimarySecurityGroup
+          DestinationSecurityGroupId: !Ref EMRPrimarySecurityGroup
         - IpProtocol: tcp
           FromPort: 8443
           ToPort: 8443
-          SourceSecurityGroupId: !Ref EMRCoreTaskSecurityGroup
+          DestinationSecurityGroupId: !Ref EMRCoreTaskSecurityGroup
       Tags:
         - Key: for-use-with-amazon-emr-managed-policies
           Value: true
